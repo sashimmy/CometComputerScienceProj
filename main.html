@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>College Application Task Manager</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Comet's College Application Task Manager 😎</h1>
+  <form>
+    <label for="task-name">Task Name:</label>
+    <input type="text" id="task-name" name="task-name" required>
+
+    <label for="due-date">Due Date:</label>
+    <input type="date" id="due-date" name="due-date" required>
+
+    <label for="priority">Priority:</label>
+    <select id="priority" name="priority" required>
+      <option value="low">Low</option>
+      <option value="medium">Medium</option>
+      <option value="high">High</option>
+    </select>
+
+    <button type="submit">Add Task</button>
+  </form>
+
+  <div id="task-list-container">
+    <h2>Task List</h2>
+    <ul id="task-list"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
