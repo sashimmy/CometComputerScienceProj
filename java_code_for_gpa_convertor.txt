@@ -1,0 +1,99 @@
+import java.util.Scanner;
+
+public class GPACalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt the user for the number of courses
+        System.out.print("Enter the number of courses: ");
+        int numCourses = scanner.nextInt();
+
+        // Initialize variables to keep track of total grade points and credits
+        double totalGradePoints = 0;
+        int totalCredits = 0;
+
+        // Loop over each course
+        for (int i = 0; i < numCourses; i++) {
+            // Prompt the user for the grade and credit hours for the current course
+            System.out.printf("Enter grade for course %d (0-100): ", i + 1);
+            double courseGrade = scanner.nextDouble();
+
+            System.out.printf("Enter credits for course %d: ", i + 1);
+            int courseCredits = scanner.nextInt();
+
+            // Calculate the grade point for the current course based on the standard 4.0 scale
+            double gradePoint = 0;
+            if (courseGrade >= 90) {
+                gradePoint = 4.0;
+            } else if (courseGrade >= 80) {
+                gradePoint = 3.0;
+            } else if (courseGrade >= 70) {
+                gradePoint = 2.0;
+            } else if (courseGrade >= 60) {
+                gradePoint = 1.0;
+            }
+
+            // Update the total grade points and credits based on the current course
+            totalGradePoints += gradePoint * courseCredits;
+            totalCredits += courseCredits;
+        }
+
+        // If no courses were entered, print an error message
+        if (totalCredits == 0) {
+            System.out.println("No courses found.");
+        } else {
+            // Calculate the GPA and print it to the console
+            double gpa = totalGradePoints / totalCredits;
+            System.out.printf("GPA: %.2f%n", gpa);
+        }
+    }
+}import java.util.Scanner;
+
+public class GPACalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt the user for the number of courses
+        System.out.print("Enter the number of courses: ");
+        int numCourses = scanner.nextInt();
+
+        // Initialize variables to keep track of total grade points and credits
+        double totalGradePoints = 0;
+        int totalCredits = 0;
+
+        // Loop over each course
+        for (int i = 0; i < numCourses; i++) {
+            // Prompt the user for the grade and credit hours for the current course
+            System.out.printf("Enter grade for course %d (0-100): ", i + 1);
+            double courseGrade = scanner.nextDouble();
+
+            System.out.printf("Enter credits for course %d: ", i + 1);
+            int courseCredits = scanner.nextInt();
+
+            // Calculate the grade point for the current course based on the standard 4.0 scale
+            double gradePoint = 0;
+            if (courseGrade >= 90) {
+                gradePoint = 4.0;
+            } else if (courseGrade >= 80) {
+                gradePoint = 3.0;
+            } else if (courseGrade >= 70) {
+                gradePoint = 2.0;
+            } else if (courseGrade >= 60) {
+                gradePoint = 1.0;
+            }
+
+            // Update the total grade points and credits based on the current course
+            totalGradePoints += gradePoint * courseCredits;
+            totalCredits += courseCredits;
+        }
+
+        // If no courses were entered, print an error message
+        if (totalCredits == 0) {
+            System.out.println("No courses found.");
+        } else {
+            // Calculate the GPA and print it to the console
+            double gpa = totalGradePoints / totalCredits;
+            System.out.printf("GPA: %.2f%n", gpa);
+        }
+    }
+}
