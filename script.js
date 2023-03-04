@@ -21,4 +21,12 @@ function addTask(event) {
   taskList.appendChild(taskItem);
 
   form.reset();
+
+  const deleteButton = taskItem.querySelector('button');
+  deleteButton.addEventListener('click', deleteTask);
+}
+
+function deleteTask(event) {
+  const taskItem = event.target.parentElement;
+  taskList.removeChild(taskItem);
 }
